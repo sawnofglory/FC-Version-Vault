@@ -1,0 +1,43 @@
+FC VERSION VAULT - LICENCE
+Copyright (c) 2026 SAWNOFGLORY. All rights reserved.
+
+1. FREE TO USE
+   You may download and use FC Version Vault for free, for personal,
+   non-commercial use.
+
+2. SHARING
+   You may share the unmodified app with others for free, as long as you
+   say it is by SAWNOFGLORY. You may not sell it, bundle it with paid
+   products, or put it behind a paywall.
+
+3. NO CHANGES
+   You may not modify, decompile or re-brand the app, or remove its credits.
+
+4. GAME FILES ARE NOT INCLUDED
+   The app contains no game files. Backups it makes are copies of YOUR OWN
+   game files, for your own use. Game files belong to Electronic Arts.
+   Do not share your backups, or any game files, with other people.
+
+5. NO WARRANTY
+   The app is provided "as is", without warranty of any kind. You use it at
+   your own risk. The author is not liable for any damage or loss, including
+   problems with your game, saves, account or files. Always keep the
+   "Undo" option and your own backups in mind before changing game files.
+
+6. NOT AFFILIATED WITH EA
+   FC Version Vault is a fan-made tool. It is not affiliated with, endorsed
+   by, or supported by Electronic Arts Inc. EA SPORTS FC is a trademark of
+   Electronic Arts Inc. Changing game files may be against EA's terms and
+   may stop online modes from working.
+
+7. PRIVACY
+   The app does not collect or send any personal data. Your settings and
+   backups stay on your computer. The only thing the app does online is ask
+   GitHub whether a newer version exists, and download it if you click Update.
+
+THIRD-PARTY FONTS (SIL Open Font License 1.1 - licence texts are installed in
+the app's "fonts" folder)
+   Big Shoulders Display (c) The Big Shoulders Project Authors  [as "VV Display"]
+   Bricolage Grotesque   (c) The Bricolage Grotesque Project Authors  [as "VV Text"]
+   Geist Mono            (c) The Geist Project Authors  [as "VV Mono"]
+   Rubik Dirt            (c) The Rubik Filtered Project Authors
