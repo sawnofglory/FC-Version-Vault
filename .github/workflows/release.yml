@@ -1,0 +1,52 @@
+# Makes a GitHub release by itself whenever release/update.json changes.
+# The release gets the 4 files in the "release" folder, and the text in release/notes.md.
+name: Make release
+
+on:
+  push:
+    branches: [main]
+    paths: ["release/update.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Get the files
+        run: git clone --depth 1 "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" .
+
+      - name: Check the files and make the release
+        run: |
+          set -e
+          VERSION=$(python3 -c "import json; print(json.load(open('release/update.json'))['version'])")
+          WANT=$(python3 -c "import json; print(json.load(open('release/update.json'))['sha256'])")
+          TAG="v$VERSION"
+          echo "Version in update.json: $VERSION"
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists. Nothing to do."
+            exit 0
+          fi
+
+          # The app file must be exactly the file that update.json was signed for.
+          HAVE=$(sha256sum release/FC-Version-Vault.exe | cut -d' ' -f1)
+          if [ "$HAVE" != "$WANT" ]; then
+            echo "STOP: update.json does not match FC-Version-Vault.exe"
+            exit 1
+          fi
+          cmp release/FC-Version-Vault.exe release/FC-Version-Vault-Setup.exe
+
+          gh release create "$TAG" \
+            release/FC-Version-Vault-Setup.exe \
+            release/FC-Version-Vault.exe \
+            release/update.json \
+            release/SHA256.txt \
+            --title "FC Version Vault $TAG" \
+            --notes-file release/notes.md \
+            --latest
