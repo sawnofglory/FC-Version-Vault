@@ -1,8 +1,8 @@
-FC Version Vault v1.0.2
+FC Version Vault v1.0.3
 
 SHA-256 (a fingerprint of the file; both files are the same program with two names):
-623b20f96ed24a959b280f935ee920700a8a296ef20afde303e2536125c0dfa6  FC-Version-Vault-Setup.exe
-623b20f96ed24a959b280f935ee920700a8a296ef20afde303e2536125c0dfa6  FC-Version-Vault.exe
+252e15e89fb72df98e380bee5440a79976423e399d0becdfae2a7627835fc95d  FC-Version-Vault-Setup.exe
+252e15e89fb72df98e380bee5440a79976423e399d0becdfae2a7627835fc95d  FC-Version-Vault.exe
 
 To check a download in Windows PowerShell:
   Get-FileHash "FC-Version-Vault-Setup.exe" -Algorithm SHA256
