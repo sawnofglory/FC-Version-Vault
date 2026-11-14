@@ -23,8 +23,9 @@ Windows may show a blue box that says **"Windows protected your PC"**. That happ
 - **Backs up** the version you have now (your own game files), so you can come back to it after EA updates the game.
 - **Switches** to any version you have a backup or zip of.
 - **Undo** puts your own version back exactly as it was.
+- **Title Updates tab** — download title updates and choose where they are saved.
+- **Squad Files tab** — download squad files for each title update, installed to your FC 27 settings folder automatically.
 - 13 languages.
-- Squad files and Compdata tabs: coming soon.
 
 Works with EA app and Steam installs.
 
